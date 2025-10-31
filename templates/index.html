@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Red Lodge Video Club</title>
+<style>
+  body {
+    background-color: #1a0000;
+    color: #e0d5c6;
+    font-family: "Courier New", monospace;
+    text-align: center;
+    margin: 0;
+  }
+  .curtain {
+    background: url("{{ url_for('static', filename='img/red-curtain.jpg') }}") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .portrait {
+    border: 6px double #d4b26a;
+    border-radius: 8px;
+    width: 220px;
+    height: auto;
+    margin-bottom: 20px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+  }
+  button {
+    background-color: #330000;
+    border: 2px solid #d4b26a;
+    color: #d4b26a;
+    font-size: 1.2em;
+    padding: 12px 40px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #5a0000;
+  }
+</style>
+</head>
+<body>
+  <div class="curtain">
+    <img src="{{ url_for('static', filename='img/portrait.png') }}" alt="Agent Portrait" class="portrait">
+    <h1>Welcome to the Red Lodge Video Club</h1>
+    <form method="POST" action="/enter">
+      <button type="submit">Enter the Lodge ▶</button>
+    </form>
+  </div>
+</body>
+</html>
+
