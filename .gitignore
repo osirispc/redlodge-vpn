@@ -1,0 +1,10 @@
+# Ignore sensitive or generated files
+*.key
+*.crt
+*.pem
+*.log
+*.tmp
+
+# WireGuard runtime directories
+/etc/wireguard/*
+/var/log/*
